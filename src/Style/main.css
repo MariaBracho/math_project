@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+.seccionBox {
+  @apply h-44 w-64  rounded-xl flex justify-center items-center my-12;
+}
+.seccionBox__text{
+  @apply text-3xl text-bg_blue font-black;
+}
+
+@tailwind utilities;
+
+
+  
