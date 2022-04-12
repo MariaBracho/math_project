@@ -1,17 +1,16 @@
 import home from './../pages/home.js'
 import gethash from './../utils/gethash.js'
-import {perimetroArea} from './../pages/perimetroArea.js'
+import {perimeterAndArea} from './../pages/perimetroArea.js'
 import { searchFigure } from '../utils/searchFigure.js'
 
 
-
-
-const routes =[
+const routes = ()=>([
   {
     name:'perimetro y area',
-    render:perimetroArea,
+    render:perimeterAndArea,
     hash:'Perimetro-area',
     operation:searchFigure,
+
 },
 {
   name:'home',
@@ -19,14 +18,14 @@ const routes =[
   hash:''||'home',
 }
 
+
 ]
-
-
+)
 
 export const router = () => {
   const homeid=document.getElementById("root")
   homeid.innerHTML=home()
-  let hash=routes.find((e)=>{
+  let hash=routes().find((e)=>{
     let currentHash=gethash()
     return e.hash==currentHash
   })
@@ -34,8 +33,9 @@ export const router = () => {
   console.log(hash)
   homeid.innerHTML=hash.render()
   
-  if(hash.hash=='Perimetro-area'){
+  if(hash.hash==='Perimetro-area'){
     hash.operation()
+   
   }
  
 

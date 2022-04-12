@@ -6,6 +6,23 @@
 .seccionBox__text{
   @apply text-3xl text-bg_blue font-black;
 }
+.button{
+@apply w-36 h-11 bg-white rounded-xl;
+}
+
+.pointer{
+@apply cursor-pointer;
+}
+
+.label{
+@apply text-white h-8 align-bottom;
+}
+
+.input{
+@apply text-white h-8 w-32 border-green-400 border-b-4 mx-3 bg-transparent outline-none;
+}
+
+
 
 @tailwind utilities;
 

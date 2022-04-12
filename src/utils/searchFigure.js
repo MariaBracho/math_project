@@ -1,12 +1,24 @@
 import { figure } from "./listofFigure"
+import { triangleFormula } from "./formulas"
 
 export const searchFigure=()=>{
-  figure.forEach((f)=>{
-    document.getElementById(f.figureid).addEventListener('click',()=>{
-      document.getElementById('figura_Geometrica').innerHTML=f.render
-     console.log(f.figureName)
-   
-    })
-   })
+  const listOfFigure=figure()
+  const renderFigure=document.getElementById('geometric_figure')
 
+  triangleFormula()
+
+  listOfFigure.forEach((figures)=>{
+  
+  document.getElementById(figures.figureid).addEventListener('click',()=>{
+  renderFigure.innerHTML=figures.render
+  figures.formula()
+    
+    })
+
+   })
+   
 }
+
+
+
+
