@@ -1,13 +1,16 @@
 @tailwind base;
 @tailwind components;
 .seccionBox {
-  @apply h-44 w-64  rounded-xl flex justify-center items-center my-12;
+  @apply h-44 w-64  rounded-xl flex justify-center items-center flex-col my-12;
 }
 .seccionBox__text{
   @apply text-3xl text-bg_blue font-black;
 }
 .button{
-@apply w-36 h-11 bg-white rounded-xl;
+@apply  w-36 h-11 absolute bottom-0 mb-14 bg-white rounded-xl;
+}
+.buttonSecundary{
+  @apply w-24 h-11  mb-14 bg-white rounded-xl
 }
 
 .pointer{

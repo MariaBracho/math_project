@@ -20,4 +20,7 @@ export const getCircleValue=()=>{
   return document.getElementById('circleRadio')?.value
 }
 
- 
+ export const getIsoscelesTriangleValues=()=>({
+  side:Number(document.getElementById("sideTriangleIsosceles")?.value),
+  base:Number(document.getElementById("baseOfTriangleIsosceles")?.value)
+ })

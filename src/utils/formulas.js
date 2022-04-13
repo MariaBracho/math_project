@@ -6,6 +6,8 @@ import { buttons } from "./perimeterAreaButton"
 import { emptyInputMessage } from "./emptyInput"
 import { emptyInput } from "./emptyInput"
 import { findZero } from "./emptyInput"
+import { getIsoscelesTriangleValues } from "./figuresValues"
+
 
 
 //triangle perimeter and area
@@ -32,6 +34,12 @@ return diameter*Math.PI
 const circleArea=(radio)=>{return (radio**2)*Math.PI}
 
 
+//isosceles
+
+
+const triangleIsoscelesPerimeter=(sideA,base)=>{return 2*sideA+base}
+const triangleIsoscelesHeight=(sideA,base)=>{return Math.sqrt(sideA**2-(base**2/4))}
+const triangleIsoscelesArea=(height,base)=>{return (base*height)/2}
 
 
 // formulas
@@ -80,6 +88,26 @@ export const triangleFormula=()=>{
      button.area.addEventListener("click",()=>{
       const circleValue=getCircleValue()
        emptyInput(circleValue)?valueResult(emptyInputMessage):valueResult(circleArea(circleValue))
+     })
+   
+
+  }
+
+  export const isoscelesTriangleFormula=()=>{
+    valueResult()
+    const button=buttons()
+
+    button.height.addEventListener("click",()=>{
+      const triangleValue=getIsoscelesTriangleValues()
+      findZero(triangleValue)?valueResult(emptyInputMessage):valueResult(triangleIsoscelesHeight(triangleValue.side,triangleValue.base))
+     })
+     button.perimeter.addEventListener("click",()=>{
+      const triangleValue=getIsoscelesTriangleValues()
+      findZero(triangleValue)?valueResult(emptyInputMessage):valueResult(triangleIsoscelesPerimeter(triangleValue.side,triangleValue.base))
+     })
+     button.area.addEventListener("click",()=>{
+      const triangleValue=getIsoscelesTriangleValues()
+      findZero(triangleValue)?valueResult(emptyInputMessage):valueResult(triangleIsoscelesArea(triangleValue.side,triangleValue.base))
      })
    
 
