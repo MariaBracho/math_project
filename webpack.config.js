@@ -50,8 +50,6 @@ const config = {
   },
 };
 
-module.exports = (env,arg) => {
-const {mode}=arg
-const isProduction=mode=="production"
+module.exports = () => {
   return config;
 };

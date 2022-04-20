@@ -3,6 +3,7 @@ module.exports = {
   './src/**/*.{html,js,css}',
   './public/**/*.{html,js,css}',
 ],
+
   theme: {
     extend: {
       colors: {
@@ -20,5 +21,9 @@ module.exports = {
       nunito: ['Nunito Sans', 'sans-serif']
     },},
   },
-  plugins: [],
+  plugins: [
+      require('@tailwindcss/forms')({
+        strategy: 'class', // only generate classes
+      }),
+  ],
 }

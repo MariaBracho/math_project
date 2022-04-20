@@ -8,8 +8,11 @@ export const buttons=()=>({
 export const renderButtons=()=>{
 const view=
 `
-<button id="perimeterButton" class="button" type="button">Perimetro</button>
-<button id="areaButton" class="button ml-44" type="button">Area</button>
+
+  <button id="perimeterButton" class="button" type="button">Perimetro</button>
+  <button id="areaButton" class="button " type="button">Area</button>
+
+
 `
 return view
 
@@ -18,7 +21,7 @@ return view
 export const renderButtonIsosceles=()=>{
 const view=
 `
-<div class="absolute bottom-0 w-full flex justify-between">
+<div class="w-full flex justify-between">
 
 <button id="heightButton" class="buttonSecundary" type="button">Height</button>
 <button id="perimeterButton" class="buttonSecundary" type="button">Perimetro</button>

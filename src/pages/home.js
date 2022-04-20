@@ -1,6 +1,7 @@
-const home=()=>{
+export const home=()=>{
   const view=`
-  <main class="bg-bg_blue h-auto w-full font-nunito font-bold pt-10"> 
+  <main class="bg-bg_blue h-auto w-full  flex flex-col items-center font-nunito font-bold pt-10"> 
+    <div class="h-auto  w-80">
     <header class="w-full flex flex-col items-center">
         <h1 class="text-4xl text-white">Matemáticas</h1>
         <p class="text-green_text text-3xl font-semibold" >Calcula y diviértete 🚀</p>
@@ -14,26 +15,24 @@ const home=()=>{
           </section>
         </a>
               
-      <a href="">
+      <a href="#/Porcentajes-y-Descuentos/">
         <section class="seccionBox bg-boxTwo" >
-        <p class="seccionBox__text">Perímetro y área</p>      
+        <p class="seccionBox__text">Precios y descuentos</p>  
+        <p class="text-base text-center text-gray-700 font-black">Taller #2</p>    
        </section></a>
        
-      <a href="">
+      <a href="#/Promedio-moda-mediana">
         <section class="seccionBox bg-boxThree">
-          <p class="seccionBox__text">Pereímetro y área</p>      
+          <p class="seccionBox__text">Promedio, Moda y mediana</p>
+          <p class="text-base text-center text-gray-700 font-black">Taller #3</p>      
          </section>
       </a>
       
-      <a href="">
-        <section class="seccionBox bg-boxFour">
-          <p class="seccionBox__text">Perímetro y área</p>      
-         </section>
-      </a>
+      
     </div>
    
 
-
+  </div>
   </main>
   
   
@@ -43,4 +42,3 @@ const home=()=>{
   return view
 }
 
-export default home

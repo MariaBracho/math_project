@@ -1,16 +1,16 @@
 @tailwind base;
 @tailwind components;
 .seccionBox {
-  @apply h-44 w-64  rounded-xl flex justify-center items-center flex-col my-12;
+  @apply h-44 w-64 px-3 rounded-xl flex justify-center items-center flex-col my-12;
 }
 .seccionBox__text{
-  @apply text-3xl text-bg_blue font-black;
+  @apply text-3xl text-bg_blue text-center font-black;
 }
 .button{
-@apply  w-36 h-11 absolute bottom-0 mb-14 bg-white rounded-xl;
+@apply  w-36 h-11  bg-white rounded-xl;
 }
 .buttonSecundary{
-  @apply w-24 h-11  mb-14 bg-white rounded-xl
+  @apply w-24 h-11  bg-white rounded-xl
 }
 
 .pointer{
@@ -18,13 +18,17 @@
 }
 
 .label{
-@apply text-white h-8 align-bottom;
+@apply text-white h-8 align-middle;
+
 }
 
 .input{
-@apply text-white h-8 w-32 border-green-400 border-b-4 mx-3 bg-transparent outline-none;
+   @apply text-white focus:ring-0 bg-transparent focus:border-gray-200 form-input rounded-xl h-8 w-32 mx-2 mb-2;
 }
 
+.container-page{
+  @apply bg-bg_blue h-screen w-full  flex flex-col items-center;
+}
 
 
 @tailwind utilities;

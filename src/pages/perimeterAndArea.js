@@ -4,14 +4,14 @@ import { renderButtons } from "../utils/perimeterAreaButton"
 export const perimeterAndArea=()=>{
   let view=`
    <div class="bg-bg_blue h-screen w-full  flex flex-col items-center">
-     <div class="h-screen relative w-80">
+     <div class="h-screen  w-80">
 
    
     <nav class="w-full mt-8 flex items-center justify-start">
      <a href="#/home"><img src="./../../assets/images/arrow.svg" alt="menu" ></a> 
     </nav>
 
-    <header class="mt-5">
+    <header class="mt-5 text-center">
       <p class="text-green_text text-3xl font-bold">Figuras geométricas</p>
       <p class="text-white text-2xl">Calcular perímetro y área </p>
     </header>
@@ -28,11 +28,11 @@ export const perimeterAndArea=()=>{
          ${triangle()}
         </section>  
 
-      <section class="mt-20">
+      <section class="mt-10">
         <p class="text-white">Resultado: <span  id="resultOfPerimetreAndArea" >0</span></p>
       </section>
 
-      <section class="" id="buttons">
+      <section class="h-32 w-full flex justify-around items-end" id="buttons">
         ${renderButtons()}
       </section>
 
