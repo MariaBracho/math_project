@@ -1,13 +1,20 @@
 import { promedioValue, valueResultPromedio } from "./promedioId"
 import { promedioButtons } from "./promedioId"
 
-const paraments=()=>{
+const paraments=(regex,replace)=>{
   const input=document.getElementById('promedioModaMediaValue')
-  const onlyOperation = /[^\d\,\.]/g
+  const onlyOperation = regex
   input.addEventListener("input", (e) => {
       let value = e.target.value
-      e.target.value = value.replace(onlyOperation, "")
+      e.target.value = value.replace(onlyOperation, replace)
   })
+}
+
+const paramentsInput=(regex,replace,str,regexTwo)=>{
+  const input=document.getElementById('promedioModaMediaValue')
+  const value=str.replace(regex,replace)
+  const valueTwo=value.replace(regexTwo,replace)
+  input.value=valueTwo
 }
 
 
@@ -50,28 +57,43 @@ return operation
 
 }
 
+//'5,12,2,5'.split(/(\d*)\,\s/)
+
 
 
 const moda=(list)=>{
-  const value=list.split(',')
+  const str2=list.replace(/^,{1,}/g, '')
+  const value=str2.replace(/,{1,}$/g,'').split(',')
+
+  console.log(value,'str3')
   const orderValue=value.sort()
   const lengthList=orderValue.length
 
-  const obj= orderValue.reduce((count,current)=>{
+  const obj = orderValue.reduce((count,current)=>{
     console.log(count)
-     count[current]=(count[current]||0)+1
-     return count
-   
-  },[])
-   
+    count[current]=(count[current]||0)+1
+    return count
+  }, { })
+  
+
+  console.log(obj)
+
   const arr=Object.values(obj)
   const ordern=arr.sort()
   const length=ordern.length
   const findRepeat=ordern[length-1]
-  const moda=obj.indexOf(findRepeat)
 
-  console.log(arr)
+  const moda=Object.entries(obj).filter(([,value])=>{
+  return value===findRepeat
 
+
+})
+
+const modaNumber= moda.map(([keys,values])=>{
+  return keys.toString()
+})
+
+console.log(findRepeat)
 
   if(lengthList===1){
     const value=orderValue[0]===''
@@ -79,33 +101,50 @@ const moda=(list)=>{
     return result
   }
   else{
-    const results=` La moda es : ${moda} y se repite: ${findRepeat} veces`
+    const results=` La moda es : ${modaNumber} y se repite: ${findRepeat} veces`
     return results
   }
+
   
 }
 
 export const mediaAritmeticaFormula=()=>{
   const buttons=promedioButtons() 
-  paraments()
+  paraments(/[^\d\,\.]/g,'')
+  paraments(/,{2,}/g, ',')
+  paraments(/^\.{1,}/,'')
+  paraments(/\.{2,}/,'.')
+  paraments(/(?<=,)\./g,'')
+
   
   buttons.media.addEventListener('click',()=>{
     const promedio= promedioValue()
+    paramentsInput(/^,{1,}/g, '',promedio,/,{1,}$/g)
+
     valueResultPromedio(mediaAritmetica(promedio))
     
   })
 
   buttons.mediana.addEventListener('click',()=>{
   const promedio=promedioValue()
+
+  paramentsInput(/^,{1,}/g, '',promedio,/,{1,}$/g)
   valueResultPromedio(mediana(promedio))
 
   })
 
   buttons.moda.addEventListener('click',()=>{
      const promedio=promedioValue()
+     paramentsInput(/^,{1,}/g, '',promedio,/,{1,}$/g)
+  
+
      const result=moda(promedio)
      valueResultPromedio(result)
 
   })
 
 }
+
+
+let ejemplo=',.4,5'
+let otroEjemplo='..9,9'

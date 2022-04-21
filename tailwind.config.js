@@ -7,18 +7,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-      'bg_blue': '#1B1C25',
-      'white':'#ffffff',
-      'green_text':'#206A5D',
-      'boxOne':'#A2D5AB',
-      'boxTwo':'#39AEA9',
-      'boxThree':'#557B83',
-      'boxFour':'#E5EFC1',
-       'white_text':'#EBECF1',
-      'grey':'#C4C4C4'
+      'bg_blue': '#001011',
+      'white':'#FFFFFC',
+      'green_text':'#6CCFF6',
+      'boxOne':'#367084',
+      'boxTwo':'#98CE00',
+      'boxThree':'#FFFFFC',
+       'grey_text':'#001011',
+      'grey':'#3B4449',
     }, 
     fontFamily: {
-      nunito: ['Nunito Sans', 'sans-serif']
+      nunito: ['Nunito', 'sans-serif']
     },},
   },
   plugins: [

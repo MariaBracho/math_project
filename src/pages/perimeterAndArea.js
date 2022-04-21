@@ -3,11 +3,11 @@ import { renderButtons } from "../utils/perimeterAreaButton"
 
 export const perimeterAndArea=()=>{
   let view=`
-   <div class="bg-bg_blue h-screen w-full  flex flex-col items-center">
-     <div class="h-screen  w-80">
+   <div class="bg-bg_blue h-screen w-full  flex flex-col items-center md:justify-center">
+     <div class="h-screen  w-80 md:h-[95%] md:shadow-xl md:shadow-[#1B404B] md:w-2/4 md:rounded-2xl md:flex flex-col items-center ">
 
    
-    <nav class="w-full mt-8 flex items-center justify-start">
+    <nav class="w-full mt-8 flex items-center justify-start md:ml-9">
      <a href="#/home"><img src="./../../assets/images/arrow.svg" alt="menu" ></a> 
     </nav>
 
@@ -24,11 +24,11 @@ export const perimeterAndArea=()=>{
          </div>
 
         </div>
-        <section  id="geometric_figure">
+        <section  id="geometric_figure" class="md:w-80 ">
          ${triangle()}
         </section>  
 
-      <section class="mt-10">
+      <section class="mt-10  w-80">
         <p class="text-white">Resultado: <span  id="resultOfPerimetreAndArea" >0</span></p>
       </section>
 
