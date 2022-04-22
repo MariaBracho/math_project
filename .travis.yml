@@ -1,9 +1,7 @@
-language: 
-cache:
- directories:
-  - ~/.npm
+language: node_js
 node_js:
-- '14.17.6'
+  - 14
+
 git:
   depth: 3
 script:
@@ -12,12 +10,11 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-  edge: true
-  github_token: $GITHUB_TOKEN  
+  github_token: $GITHUB_TOKEN
   keep_history: true
-  local-dir: dist/
-  target_branch: gh-pages 
+  local_dir: dist/
+  target_branch: gh-pages
   on:
-   branch: master
+    branch: master
 
  
