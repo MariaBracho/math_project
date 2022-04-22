@@ -5,7 +5,6 @@ let reget=/[^-\w]/ig
     window.location.hash='#/home/'
   }
   let cadena=hash.replaceAll(reget,'')
-  console.log(cadena)
   return cadena
 }
 

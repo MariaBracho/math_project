@@ -1,10 +1,10 @@
-import {circle } from "../pages/geometric_figures";
-import {square } from "../pages/geometric_figures";
-import {triangle } from "../pages/geometric_figures";
+import {circle } from "../../pages/geometric_figures";
+import {square } from "../../pages/geometric_figures";
+import {triangle } from "../../pages/geometric_figures";
 import { triangleFormula } from "./formulas";
 import { squareFormula } from "./formulas";
 import { circleFormula } from "./formulas";
-import { triangleIsosceles } from "../pages/geometric_figures";
+import { triangleIsosceles } from "../../pages/geometric_figures";
 import { isoscelesTriangleFormula } from "./formulas";
 import { renderButtonIsosceles } from "./perimeterAreaButton";
 import { renderButtons } from "./perimeterAreaButton";

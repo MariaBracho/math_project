@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 .seccionBox {
-  @apply h-44 w-64 px-3 rounded-xl flex justify-center items-center flex-col my-12;
+  @apply h-44 w-64 px-3 rounded-xl flex justify-center items-center flex-col my-12 md:mx-3;
 }
 .seccionBox__text{
   @apply text-3xl text-bg_blue text-center font-black;
@@ -10,11 +10,11 @@
 @apply  w-36 h-11  bg-white rounded-xl;
 }
 .buttonSecundary{
-  @apply w-24 h-11  bg-white rounded-xl
+  @apply  w-24 h-10 leading-none  bg-white rounded-xl
 }
 
-.pointer{
-@apply cursor-pointer;
+.textData{
+@apply text-boxTwo mb-2 pl-36;
 }
 
 .label{
@@ -22,12 +22,20 @@
 
 }
 
+.inputSecundary{
+@apply text-white focus:ring-0 bg-transparent focus:border-gray-200 form-input rounded-xl;
+}
+
 .input{
-   @apply text-white focus:ring-0 bg-transparent focus:border-gray-200 form-input rounded-xl h-8 w-32 mx-2 mb-2;
+   @apply inputSecundary h-8 w-32 mx-2 mb-2;
 }
 
 .container-page{
   @apply bg-bg_blue h-screen w-full  flex flex-col items-center;
+}
+
+.nav{
+@apply w-full mt-8 flex items-center justify-start md:ml-9;
 }
 
 

@@ -1,38 +1,40 @@
 import {home} from './../pages/home'
 import {gethash} from './../utils/gethash'
 import {perimeterAndArea} from './../pages/perimeterAndArea'
-import { searchFigure } from '../utils/searchFigure'
+import { searchFigure } from './../utils/perimeterArea/searchFigure'
 import { percentagesAndDiscount } from '../pages/percentagesAndDiscounts'
-import { priceWithDiscountformula } from '../utils/discountFormula'
+import { priceWithDiscountformula } from './../utils/porcentagesAndDescount/discountFormula'
 import { promedio_moda_mediana } from '../pages/promedio_Moda_mediana'
-import  {mediaAritmeticaFormula} from '../utils/promedioFormula'
+import  {onclick} from './../utils/promedioModaMediana/promedioFormula'
+import { interesSimpleCompuesto } from '../pages/interesSimpleCompuesto'
+import { interestFormula } from '../utils/interesSimpleCompuesto/formulaInteres'
 
 
 
 const routes = ()=>([
   {
-    name:'perimetro y area',
     render:perimeterAndArea,
     hash:'Perimetro-area',
     operation:searchFigure,
-
 },
 {
-  name:'home',
   render:home,
   hash:''||'home',
 },
 {
-name:'porcentajes y descuentos',
 render:percentagesAndDiscount,
 hash:'Porcentajes-y-Descuentos',
 operation:priceWithDiscountformula
 },
 {
-name:'promedio, moda y mediana',
 render:promedio_moda_mediana,
 hash:'Promedio-moda-mediana',
-operation:mediaAritmeticaFormula
+operation:onclick
+},
+{
+render:interesSimpleCompuesto,
+hash:'Interes-simple-compuesto',
+operation:interestFormula
 }
 
 
@@ -48,7 +50,7 @@ export const router = () => {
     return e.hash==currentHash
   })
 
-  console.log(hash)
+  
   homeid.innerHTML=hash.render()
   
   if(hash.hash!='home'){

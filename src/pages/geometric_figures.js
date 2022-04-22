@@ -1,7 +1,7 @@
 export const triangle=()=>{
   const figure =`
   <div class="mt-8 h-32" >
-  <p class="text-boxTwo mb-2 pl-36 ">Introduce los datos</p>
+  <p class="textData">Introduce los datos</p>
   <div class="flex justify-between">
     
     <div>
@@ -45,7 +45,7 @@ export const triangle=()=>{
 export const square=()=>{
   const figure=`
   <div class="mt-8 h-32">
-        <p class="text-boxTwo mb-2 pl-36">Introduce los datos</p>
+        <p class="textData">Introduce los datos</p>
         <div class="flex justify-between">
           <div>
             <img class="h-20 w-20" src="./../../assets/images/square.svg" alt="">
@@ -69,7 +69,7 @@ export const square=()=>{
 export const circle=()=>{
   const figure=`
   <div class="mt-8 h-32">
-        <p class="text-boxTwo mb-2 pl-36">Introduce los datos</p>
+        <p class="textData">Introduce los datos</p>
         <div class="flex justify-between">
           <div>
             <img class="h-20 w-20" src="./../../assets/images/circle.svg" alt="">
@@ -92,7 +92,7 @@ export const circle=()=>{
 export const triangleIsosceles=()=>{
   const figure =`
   <div class="mt-8 h-32" >
-  <p class="text-boxTwo mb-2 pl-36">Introduce los datos</p>
+  <p class="textData">Introduce los datos</p>
   <div class="flex justify-between">
     <div>
       <img class="h-20 w-20" src="./../../assets/images/triangle.svg" alt="">

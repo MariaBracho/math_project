@@ -1,5 +1,5 @@
 import { triangle } from "./geometric_figures"
-import { renderButtons } from "../utils/perimeterAreaButton"
+import { renderButtons } from "../utils/perimeterArea/perimeterAreaButton"
 
 export const perimeterAndArea=()=>{
   let view=`
@@ -7,7 +7,7 @@ export const perimeterAndArea=()=>{
      <div class="h-screen  w-80 md:h-[95%] md:shadow-xl md:shadow-[#1B404B] md:w-2/4 md:rounded-2xl md:flex flex-col items-center ">
 
    
-    <nav class="w-full mt-8 flex items-center justify-start md:ml-9">
+    <nav class="nav">
      <a href="#/home"><img src="./../../assets/images/arrow.svg" alt="menu" ></a> 
     </nav>
 
@@ -17,10 +17,10 @@ export const perimeterAndArea=()=>{
     </header>
         <div class="w-full flex justify-center">
          <div class="h-20 w-64 bg-grey rounded-xl flex justify-around items-center mt-7">
-          <div><img class="pointer" id="3" src="../../assets/images/square.svg" alt="square"></div>
-           <div><img class="pointer" id="1" src="./../../assets/images/triangle.svg" alt="triangle" ></div>
-           <div><img class="pointer" id="2" src="../../assets/images/circle.svg" alt="circle"></div>
-           <div><img class="pointer" id="4" src="./../../assets/images/triangle.svg" alt="triangle"></div>
+          <div><img class="cursor-pointer" id="3" src="../../assets/images/square.svg" alt="square"></div>
+           <div><img class="cursor-pointer" id="1" src="./../../assets/images/triangle.svg" alt="triangle" ></div>
+           <div><img class="cursor-pointer" id="2" src="../../assets/images/circle.svg" alt="circle"></div>
+           <div><img class="cursor-pointer" id="4" src="./../../assets/images/triangle.svg" alt="triangle"></div>
          </div>
 
         </div>
