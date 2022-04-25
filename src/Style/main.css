@@ -1,13 +1,13 @@
 @tailwind base;
 @tailwind components;
 .seccionBox {
-  @apply h-44 w-64 px-3 rounded-xl flex justify-center items-center flex-col my-12 md:mx-3;
+  @apply h-44 w-64 px-3 rounded-xl flex justify-center items-center flex-col my-12 md:mx-3 ;
 }
 .seccionBox__text{
   @apply text-3xl text-bg_blue text-center font-black;
 }
 .button{
-@apply  w-36 h-11  bg-white rounded-xl;
+@apply  w-36 h-11 bg-white rounded-xl ;
 }
 .buttonSecundary{
   @apply  w-24 h-10 leading-none  bg-white rounded-xl
@@ -31,11 +31,15 @@
 }
 
 .container-page{
-  @apply bg-bg_blue h-screen w-full  flex flex-col items-center;
+  @apply h-screen min-h-[640px] relative w-80 md:h-[95%] md:shadow-xl md:shadow-[#1B404B] md:w-2/4 md:rounded-2xl md:flex flex-col items-center;
+}
+
+.containe-page-primary{
+@apply bg-bg_blue h-screen w-full min-h-[640px] flex flex-col items-center md:justify-center
 }
 
 .nav{
-@apply w-full mt-8 flex items-center justify-start md:ml-9;
+@apply  mt-8  md:ml-7 absolute top-0 left-0;
 }
 
 
