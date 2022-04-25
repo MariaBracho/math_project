@@ -39,7 +39,7 @@ const view=
      </div>
      </div>
 
-     <section class="absolute bottom-0 mb-9" id="buttons">
+     <section class="absolute bottom-0 mb-12" id="buttons">
        <div class="w-80 flex justify-between">
         <button id="buttonSimple" class="button w-28">Interés simple</button>
         <button id="buttonCompuesto" class="button w-28 leading-none">Interés compuesto</button>

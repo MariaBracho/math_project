@@ -35,7 +35,7 @@ const view=
      </div>
      </div>
 
-     <div class="absolute bottom-0 mb-9">
+     <div class="absolute bottom-0 mb-12">
       <button id="buttonDiscount" class="button  ">Precio final</button>
      </div>
       

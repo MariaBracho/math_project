@@ -29,7 +29,7 @@ export const perimeterAndArea=()=>{
          ${triangle()}
         </section>  
 
-        <div class="mt-14">
+        <div class="mt-32">
         <p class="text-white relative">El resultado:</p>
         <div class="w-64 h-auto border-2 mt-3 border-gray-500 rounded-lg mx-auto">
 
@@ -38,7 +38,7 @@ export const perimeterAndArea=()=>{
         </div>
         </div>
 
-      <section class="absolute bottom-0 mb-9" id="buttons">
+      <section class="absolute bottom-0 mb-12" id="buttons">
         ${renderButtons()}
       </section>
 
